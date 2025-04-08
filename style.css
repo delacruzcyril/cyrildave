@@ -1,0 +1,218 @@
+body {
+    font-family: 'Times New Roman', Times,;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('bg.jpg');
+    text-align: center;
+}
+
+header {
+    color: rgb(7, 7, 7);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: large;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+#hero, #about, #contact, #information {
+    padding: 80px 10%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('bg.jpg');
+}
+
+#hero {
+    height: 100vh; 
+    padding-top: 70px;
+}
+
+h1, h2, h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+img, .about-image, .contact-image, .info-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 10%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+p, .info-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    text-align: left;
+}
+
+.contact-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-text {
+    text-align: center;
+  
+}
+
+.info-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.info-text h2 {
+    font-size: 1.8em;
+    margin: 30px 0 0;
+    color: rgb(5, 5, 5);
+  
+}
+
+.info-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-text ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-toggle {
+        display: block; /* Show on smaller screens */
+        margin-right: -270px; /* Add some margin to the left */
+    }
+
+    .logo {
+        margin-left: auto; /* Push the logo to the right */
+        margin-left: 20px; /* Add some margin to the right */
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: #0078d7;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 8px;
+        padding: 10px;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex; 
+    }
+   
+
+    #hero, #about, #contact, #information {
+        padding: 40px 10%;
+        flex-direction: column; 
+    }
+
+    img, .about-image, .contact-image, .info-image {
+        width: 200px;
+        height: 200px;
+        margin: 20px 0;
+        
+    }
+
+    h1, h2, h3 {
+        text-align: left;
+    
+        
+    }
+
+    .btn {
+        display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    transition: transform 0.3s;
+    }
+
+    .info-content {
+        flex-direction: column; 
+    }
+}
